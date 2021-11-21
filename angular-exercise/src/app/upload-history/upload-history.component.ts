@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upload-history.component.scss']
 })
 export class UploadHistoryComponent implements OnInit {
+  uploadHistory: any = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    const value = localStorage.getItem('uploadHistory');
+    if (value)
+      this.uploadHistory = JSON.parse(value);
+  }
+
+  clear() {
+    localStorage.removeItem('uploadHistory');
+    this.uploadHistory = [];
   }
 
 }

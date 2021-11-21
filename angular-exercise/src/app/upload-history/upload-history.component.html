@@ -1,1 +1,20 @@
-<p>upload-history works!</p>
+<div class="container" style="text-align:center;margin-top: 20px;">
+    <h2>Upload History</h2>
+
+    <mat-table [dataSource]="uploadHistory">
+        <ng-container matColumnDef="file">
+            <mat-header-cell *matHeaderCellDef>File Name</mat-header-cell>
+            <mat-cell *matCellDef="let file"> {{file.file}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="path">
+            <mat-header-cell *matHeaderCellDef>Full Path</mat-header-cell>
+            <mat-cell *matCellDef="let file"> {{file.path}} </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="['file','path']"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: ['file','path'];"></mat-row>
+    </mat-table>
+    <br/>
+    <br/>
+    <button class="btn btn-primary" type="submit" (click)="clear()">Clear</button>
+
+</div>

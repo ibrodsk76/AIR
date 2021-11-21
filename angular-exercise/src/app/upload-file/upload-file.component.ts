@@ -16,11 +16,8 @@ export class UploadFileComponent implements OnInit {
   selectedFile: any = {file:'', path:''};
   isUploading: boolean = false;
   uploadComplete:boolean = false;
+  uploadHistory: any = [];
 
-  handleFileInput(target: any): void {
-    //this.fileToUpload = target.files.item(0);
-    this.fileInputField = target;
-  }
   constructor(public dialog: MatDialog, private httpClient: HttpClient) { }
 
   getFileList(){
@@ -41,10 +38,12 @@ export class UploadFileComponent implements OnInit {
 
   ngOnInit(): void {
     this.getFileList().subscribe((files) => {
-    //  console.log(files);
       this.fileList = files;
       
     });
+    const value = localStorage.getItem('uploadHistory');
+    if (value)
+      this.uploadHistory = JSON.parse(value);
   }
 
   upload(): void {
@@ -52,6 +51,8 @@ export class UploadFileComponent implements OnInit {
     setTimeout(() => {
       this.isUploading = false;
       this.uploadComplete = true;
+      this.uploadHistory.push(this.selectedFile);
+      localStorage.setItem('uploadHistory', JSON.stringify(this.uploadHistory));
       this.selectedFile = {file:'', path:''};
     }, 5000);
   }

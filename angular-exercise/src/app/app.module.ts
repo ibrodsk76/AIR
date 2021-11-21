@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from '@angular/material/progress-bar'
-import { MatTreeModule } from '@angular/material/tree'
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table'
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { UploadHistoryComponent } from './upload-history/upload-history.component';
 import { FileListComponent } from './file-list/file-list.component';
@@ -32,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatDialogModule,
     MatProgressBarModule,
-    MatTreeModule
+    MatGridListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
