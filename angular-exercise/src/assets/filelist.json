@@ -1,0 +1,46 @@
+{
+    "fileList": [
+        {
+            "path": "root/dir1/dirx/file.ext"
+        },
+        {
+            "path": "root/dir1/dirx/file1.ext"
+        },
+        {
+            "path": "root/dir1/file2.ext"
+        },
+        {
+            "path": "root/dir2/diry/file3.ext"
+        },
+        {
+            "path": "root/dir3/dirz/file4.ext"
+        },
+        {
+            "path": "root/dir4/dira/file5.ext"
+        },
+        {
+            "path": "root/dir5/dirb/file6.ext"
+        },
+        {
+            "path": "root/dir6/dir0/file7.ext"
+        },
+        {
+            "path": "root/dir6/dir0/file8.ext"
+        },
+        {
+            "path": "root/dir6/dir0/file9.ext"
+        },
+        {
+            "path": "root/file10.ext"
+        },
+        {
+            "path": "root/dir7/dirc/dirv/file11.ext"
+        },
+        {
+            "path": "root/dir7/dirc/dire/"
+        },
+        {
+            "path": "root/dir7/dirc/file12.ext"
+        }
+    ]
+}

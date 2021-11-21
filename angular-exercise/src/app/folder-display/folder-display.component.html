@@ -1,0 +1,14 @@
+
+
+        <li type="square">
+            <span>{{folderList.folder}}</span>
+            <ul>
+                    <app-folder-display *ngFor='let folder of folderList.subfolders' [folderList]="folder" (mySelectedFile)="updateSelectedFile($event)"
+                        [selectedFile]="selectedFile">
+                    </app-folder-display>
+                <li *ngFor='let file of folderList.files'  (click)="onSelect(file)" type="circle">
+                    <span [ngClass]="getSelected(file.path)">{{file.file}}</span>
+                </li>     
+            </ul>
+        </li>
+

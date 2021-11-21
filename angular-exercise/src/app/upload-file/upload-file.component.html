@@ -1,0 +1,17 @@
+<div class="container" style="text-align:center;margin-top: 20px;">
+<h2>Upload File</h2>
+<form>
+  <div class="form-group">
+    <label for="image">File:</label>
+    <input id="newfile" type="text" name="newfile" [(ngModel)]="selectedFile.path">
+    <button mat-button (click)="openDialog()">Open dialog</button>
+  </div>
+  <button class="btn btn-primary" type="submit" (click)="upload()" [disabled]="selectedFile.path === ''">Upload Your File</button>
+</form>
+<br/>
+<br/>
+<mat-progress-bar mode="indeterminate" *ngIf="isUploading"></mat-progress-bar>
+
+<div class="alert alert-success" *ngIf="uploadComplete"><strong>Upload complete!</strong></div>
+
+</div>

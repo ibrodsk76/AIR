@@ -1,0 +1,11 @@
+
+
+<mat-dialog-content>
+    <ul>
+        <app-folder-display [folderList]="folderList" (mySelectedFile)="updateSelectedFile($event)" [selectedFile]="selectedFile"></app-folder-display>
+    </ul>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button type="submit" class="btn btn-primary" mat-button (click)="submit()">OK</button> &nbsp;
+    <button type="submit" class="btn btn-primary" mat-button (click)="cancel()">Cancel</button>
+</mat-dialog-actions>
