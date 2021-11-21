@@ -4,7 +4,7 @@
   <div class="form-group">
     <label for="image">File:</label>&nbsp;
     <input id="newfile" type="text" name="newfile" [(ngModel)]="selectedFile.path">&nbsp;
-    <button class="btn btn-primary" (click)="openDialog()">Browse</button>
+    <button class="btn btn-primary btn-sm" (click)="openDialog()">Browse</button>
   </div>
   <button class="btn btn-primary" type="submit" (click)="upload()" [disabled]="selectedFile.path === ''">Upload Your File</button>
 </form>
